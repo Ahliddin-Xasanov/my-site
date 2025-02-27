@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matn,Rasmlar va Kodlar almashuvchi">
+    <meta name="author" content="Ahliddin">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Shiriftlash, 2-lik kod, 8-lik kod, 16-lik kod, matn, rasm, kodlar">
+
+    <link rel="shortcut icon" sizes="35x35" href="images/icon.png">
+    <link rel="stylesheet" href="images/file/css/style.css">
+    
+    <title>Shiriftlash</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Matn,Rasmlar va Kodlar almashuvchi <img class="lock" src="images/file/css/img/lock.png"></h1>
+        
+        <input type="file" id="fileInput" accept=".txt, image/*">
+        <br>
+        <div class="buttonlar">
+            <button id="convertToBinaryButton">2-lik Kodga O'zgartirish</button>
+            <button id="convertToOctalButton">8-lik Kodga O'zgartirish</button>
+            <button id="convertToHexButton">16-lik Kodga O'zgartirish</button>
+        </div>
+        <div class="buttonlar">
+            <button class="otkazish" id="convertToTextButton">Oddiy Matnga O'zgartirish</button>
+            <button class="otkazish" id="decodeToImageButton">Kodlarni Rasmga O'zgartirish</button>
+        </div>
+        <a id="downloadLink" style="display:none; padding-top: 0px; font-size: 25px;">Yuklab Olish</a>
+    </div>
+
+    <div class="admin-panel" style="display:none;">
+        <h2>Admin Panel</h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>IP Manzil</th>
+                    <th>Kirishlar Soni</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <p>Umumiy kirishlar soni: <span id="totalVisits">0</span></p>
+    </div>
+
+    <div class="admin-login">
+        <h2>Admin sifatida kirish</h2>
+        <form id="adminLoginForm">
+            <label for="username">Login:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Parol:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Kirish</button>
+        </form>
+    </div>
+
+    <script src="images/file/js/script.js"></script>
+</body>
+</html>
